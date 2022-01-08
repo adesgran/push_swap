@@ -1,6 +1,7 @@
 # Perso
 push_swap
 *.swp
+libft/
 
 # Prerequisites
 *.d
