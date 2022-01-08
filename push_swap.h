@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 14:59:06 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/08 15:12:40 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ typedef struct	s_piles {
 	int	len_b;
 }	t_piles;
 
-int	swap_a(t_piles *piles)
-int	swap_b(t_piles *piles)
-int	swap_s(t_piles *piles)
-int	push_a(t_piles piles)
-int	push_b(t_piles piles)
-int	rotate_a(t_piles piles)
-int	rotate_b(t_piles piles)
-int	rotate_r(t_piles piles)
+int	swap_a(t_piles *piles);
+int	swap_b(t_piles *piles);
+int	swap_s(t_piles *piles);
+int	push_a(t_piles piles);
+int	push_b(t_piles piles);
+int	rotate_a(t_piles piles);
+int	rotate_b(t_piles piles);
+int	rotate_r(t_piles piles);
+int	rrotate_a(t_piles piles);
+int	rrotate_b(t_piles piles);
+int	rrotate_r(t_piles piles);
 #endif
