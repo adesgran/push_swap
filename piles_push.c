@@ -6,13 +6,13 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:38:38 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 14:48:10 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/08 15:19:11 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-int	push_a(t_piles piles)
+int	push_a(t_piles *piles)
 {
 	ft_printf("pa\n");
 	if (!piles->len_b)
@@ -23,7 +23,7 @@ int	push_a(t_piles piles)
 	return (0);
 }
 
-int	push_b(t_piles piles)
+int	push_b(t_piles *piles)
 {
 	ft_printf("pb\n");
 	if (!piles->len_a)
