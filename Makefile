@@ -9,7 +9,7 @@ LIBFT_REPO = https://github.com/adesgran/libft_extended.git
 CC = gcc
 C_FLAGS = -Wall -Wextra -Werror
 
-C_FILES = $(wildcard *.c)
+C_FILES = $(wildcard *.c) $(wildcard piles_op/*.c) $(wildcard utils/*.c)
 H_FILES = -I ${LIBFT_DIR} -I .
 
 all: ${LIBFT} ${NAME}

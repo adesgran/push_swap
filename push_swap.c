@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 16:02:58 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/08 16:22:20 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,10 @@ int	main(int ac, char **av)
 	ft_printf("Tab : \n\n");
 	print_piles(piles);
 	push_b(piles);
+	print_piles(piles);
+	rotate_a(piles);
+	print_piles(piles);
+	rrotate_a(piles);
 	print_piles(piles);
 	free_piles(piles);
 	return (0);
