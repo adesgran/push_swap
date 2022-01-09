@@ -6,58 +6,75 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 16:22:20 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/09 02:32:26 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-void	print_tab(int *tab, int size)
+static int	get_min_pos(t_piles *piles)
 {
+	int	min;
 	int	i;
+	int	index;
 
+	min = piles->pile_a[0];
 	i = 0;
-	while (i < size)
+	index = 0;
+	while (i < piles->len_a)
 	{
-		ft_printf("\t|%d\n", tab[i]);
+		if (piles->pile_a[i] <= min)
+		{
+			min = piles->pile_a[i];
+			index = i;
+		}
 		i++;
 	}
+	return (index);
 }
 
-void	print_piles(t_piles *piles)
+static void	rotate_to_min(t_piles *piles)
 {
+	int	index;
+	int	size;
 	int	i;
-	int	j;
 
-	i = piles->len_a - 1;
-	j = piles->len_b - 1;
-	ft_printf("_____________________\n");
-	if (i > j)
-		j = i;
-	else
-		i = j;
-	while (i >= 0 || j >= 0)
+	index = get_min_pos(piles);
+	size = piles->len_a;
+	if (index >= size / 2)
 	{
-		if (i >= 0 && i < piles->len_a)
-			ft_printf("%d", piles->pile_a[i]);
-		ft_printf("\t|  ");
-		if (j >= 0 && j < piles->len_b)
-			ft_printf("%d", piles->pile_b[j]);
-		ft_printf("\n");
-		i--;
-		j--;
+		i = size - index - 1;
+		ft_printf("i = %d\n", i);
+		while (i)
+		{
+			rotate_a(piles);
+			print_piles(piles);
+			i--;
+		}
 	}
-	ft_printf("_____________________\n");
-	ft_printf("\n");
+	else
+	{
+		i = index + 1;
+		while (i)
+		{
+			rrotate_a(piles);
+			print_piles(piles);
+			i--;
+		}
+	}
 }
 
-int	free_piles(t_piles *piles)
+
+static void	sort_piles(t_piles *piles)
 {
-	free(piles->pile_a);
-	free(piles->pile_b);
-	free(piles);
-	return (1);
+	while (piles->len_a)
+	{
+		rotate_to_min(piles);
+		push_b(piles);
+		print_piles(piles);
+	}
 }
+	
 
 int	main(int ac, char **av)
 {	
@@ -71,14 +88,8 @@ int	main(int ac, char **av)
 	piles = init_piles(ac - 1, av + 1);
 	if (!piles)
 		return (1);
-	ft_printf("Tab : \n\n");
 	print_piles(piles);
-	push_b(piles);
-	print_piles(piles);
-	rotate_a(piles);
-	print_piles(piles);
-	rrotate_a(piles);
-	print_piles(piles);
+	sort_piles(piles);
 	free_piles(piles);
 	return (0);
 }
