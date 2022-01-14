@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/09 02:32:26 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/14 13:02:15 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ static void	rotate_to_min(t_piles *piles)
 	}
 }
 
-
 static void	sort_piles(t_piles *piles)
 {
 	while (piles->len_a)
@@ -74,7 +73,6 @@ static void	sort_piles(t_piles *piles)
 		print_piles(piles);
 	}
 }
-	
 
 int	main(int ac, char **av)
 {	
@@ -93,4 +91,3 @@ int	main(int ac, char **av)
 	free_piles(piles);
 	return (0);
 }
-

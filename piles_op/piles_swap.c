@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:16:23 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 15:16:30 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/14 13:04:07 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ static int	swap_sb(t_piles *piles)
 }
 
 int	swap_s(t_piles *piles)
-{	int	res;
+{
+	int	res;
 
 	ft_printf("ss\n");
 	res = 0;

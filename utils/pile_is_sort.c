@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:13:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/14 11:44:42 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/14 13:03:48 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	pile_is_sort(t_piles *piles)
 
 	a = piles->pile_a;
 	gap = 0;
-	i = 0;
-	while (i < piles->len_a)
+	i = -1;
+	while (++i < piles->len_a)
 	{
 		if (i)
 		{
@@ -33,7 +33,6 @@ int	pile_is_sort(t_piles *piles)
 			if (a[piles->len_a - 1] < a[0])
 				gap += 1;
 		}
-		i++;
 	}
 	if (gap == 0 || gap == 1)
 		return (-1);

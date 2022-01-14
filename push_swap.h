@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/14 11:45:23 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/14 13:01:39 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <libft.h>
 
-typedef struct	s_piles { 
+typedef struct s_piles {
 	int	*pile_a;
 	int	*pile_b;
 	int	len_a;
