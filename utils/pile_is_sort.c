@@ -6,13 +6,13 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:13:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/09 18:21:23 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/14 11:44:42 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-int	pile_is_sort(t_piles piles)
+int	pile_is_sort(t_piles *piles)
 {
 	int	*a;
 	int	gap;
