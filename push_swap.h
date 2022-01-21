@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/14 13:01:39 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/21 17:58:55 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ t_piles	*init_piles(int ac, char **av);
 void	print_piles(t_piles *piles);
 int		free_piles(t_piles *piles);
 int		pile_is_sort(t_piles *piles);
+void	fast_sort(t_piles *piles);
+t_piles	*duplicate_piles(t_piles *piles);
 #endif

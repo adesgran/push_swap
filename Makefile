@@ -3,13 +3,13 @@ NAME = push_swap
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 
-UTILS = $(wildcard gnl/*.c)
-PILE_OP = $(wildcard ft_printf/*.c)
+UTILS = $(wildcard utils/*.c)
+PILE_OP = $(wildcard piles_op/*.c)
 
-C_FILES = ${UTILS} ${PILE_OP} 
+C_FILES = $(wildcard *.c) ${UTILS} ${PILE_OP} 
 
 O_FILES = ${C_FILES:.c=.o}
-INCLUDES = -I .
+INCLUDES = -I . -I libft
 
 LIBS = -L libft -lft
 LIBFT = libft/libft.a

@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 01:36:39 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/21 15:54:56 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/21 16:48:08 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ void	print_piles(t_piles *piles)
 		j = i;
 	else
 		i = j;
+	ft_printf("--\n");
 	while (i >= 0 || j >= 0)
 	{
+		ft_printf("%d |\t", i);
 		if (i >= 0 && i < piles->len_a)
-			ft_printf("%d\t%d ", i, piles->pile_a[i]);
+			ft_printf("%d ", piles->pile_a[i]);
 		else
 			ft_printf("  ");
 		if (j >= 0 && j < piles->len_b)
@@ -35,9 +37,9 @@ void	print_piles(t_piles *piles)
 		i--;
 		j--;
 	}
-	ft_printf("_ _\n");
+	ft_printf("--\n");
+	ft_printf("\t_ _\n");
 	ft_printf("\ta b\n");
-	ft_printf("------------------------------------------------------------------\
-	-------------------------------\n");
+	ft_printf("--------------\n");
 	ft_printf("\n");
 }
