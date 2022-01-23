@@ -39,4 +39,5 @@ int		free_piles(t_piles *piles);
 int		pile_is_sort(t_piles *piles);
 void	fast_sort(t_piles *piles);
 t_piles	*duplicate_piles(t_piles *piles);
+void	sort1(t_piles *piles);
 #endif
