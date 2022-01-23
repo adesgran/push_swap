@@ -1,7 +1,7 @@
 NAME = push_swap
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 
 UTILS = $(wildcard utils/*.c)
 PILE_OP = $(wildcard piles_op/*.c)
@@ -32,3 +32,6 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+
+test: all
+	./push_swap 1 3 6 4 5 2
