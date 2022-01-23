@@ -39,22 +39,23 @@ static void	sort_pile_a(t_piles *piles)
 static void	split_piles(t_piles *piles)
 {
 	int	i;
+	int	j;
 
 	i = piles->len_a / 2;
+	j = 0;
 	while (i < piles->len_a)
 	{
-		piles->pile_b[piles->len_a / 2 - i] = piles->pile_a[i];
+		piles->pile_b[j] = piles->pile_a[i];
 		piles->pile_a[i] = 0;
 		i++;
+		j++;
 	}
+	piles->len_b = piles->len_a - piles->len_a / 2;
 	piles->len_a = piles->len_a / 2;
-	piles->len_a = piles->len_a - piles->len_a / 2;
 }
 
 void	fast_sort(t_piles *piles)
 {
 	sort_pile_a(piles);
 	split_piles(piles);
-	ft_printf("SPLITTED PILE : \n\n");
-	print_piles(piles);
 }
