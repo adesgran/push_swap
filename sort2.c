@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/23 17:41:05 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:55:15 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,32 +38,44 @@ static void	rotate_to_begin(t_piles *piles, int *begin, int *end)
 	*begin = piles->len_a - 1;
 }
 
-static void	merge_parts(t_piles *piles, int size_1, int size_2)
+static int	split_piles(t_piles *piles, int size_1, int size_2)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < size_2 - 1)
+	while (i < size_2)
 	{
 		push_b(piles);
 		rrotate_a(piles);
-		rotate_b(piles);
 		i++;
 	}
-	push_b(piles);
-	rotate_b(piles);
 	j = 0;
-	while (j < size_2 || i)
+	while j < (size_2)
 	{
-		if (j == size_2 || (piles->pile_b[i] < piles->pile_a[0] && i))
+		rrotate_a(piles);
+		j++;
+	}
+	return (i - 1);
+}
+
+static void	merge_parts(t_piles *piles, int size_1, int size_2)
+{
+	int	i;
+	int	j;
+
+	i = split_piles(piles, size_1, size_2);
+	j = 0;
+	while (j < size_2 || i < size_1)
+	{
+		if (j == size_2 || (piles->pile_b[i] > piles->pile_a[0] && i))
 		{
 			push_a(piles);
 			i--;
 		}
 		else
 		{
-			rrotate_a(piles);
+			rotate_a(piles);
 			j++;
 		}
 	}
