@@ -34,4 +34,4 @@ fclean: clean
 re: fclean all
 
 test: all
-	./push_swap 1 3 6 4 5 2
+	./push_swap 1 3 6 4 2 5
