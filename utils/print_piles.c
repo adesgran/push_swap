@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 01:36:39 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/21 16:48:08 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/01/24 18:31:57 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 void	print_piles(t_piles *piles)
 {
+	static int	count;
 	int	i;
 	int	j;
 
+	if (!count)
+		count = 0;
+	count++;
+//	if (count > 10)
+//		exit(1);
 	i = piles->len_a - 1;
 	j = piles->len_b - 1;
 	if (i > j)
