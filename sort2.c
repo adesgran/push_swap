@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/24 19:04:46 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:09:30 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ void	recurs(t_piles *piles, int begin, int end)
 	}
 	else if (begin - end == 1)
 	{
-		ft_printf("Diff = 1 : %d\n%d\n", piles->pile_a[begin], piles->pile_a[end]);
+		ft_printf("Diff = 1 : %d %d\n", piles->pile_a[begin], piles->pile_a[end]);
 		if (piles->pile_a[begin] < piles->pile_a[end])
 		{
 			swap_a(piles);
