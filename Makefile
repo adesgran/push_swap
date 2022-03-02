@@ -35,3 +35,7 @@ re: fclean all
 
 test: all
 	./push_swap 1 3 6 4 2 5
+testt: all
+	./push_swap 1 3 6 4 2 5 7
+testtt: all
+	./push_swap 1 3 6 4 2 5 8 7
