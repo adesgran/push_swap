@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/02 15:09:30 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:56:55 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,11 +105,11 @@ void	recurs(t_piles *piles, int begin, int end)
 		rotate_to_begin(piles, &begin, &end);
 		ft_printf("Recurs 1\n");
 		recurs(piles, begin, (begin + end + 1) / 2);
-		size_1 = begin - ((begin + end + 1) / 2) + 1;
+		size_1 = (begin - end + 1) / 2;
 		rotate_a(piles);
 		ft_printf("Recurs 2\n");
-		recurs(piles, begin, (begin + end - 1) / 2 + 2);
-		size_2 = begin - end - size_1 + 1;
+		size_2 = (begin - end + 1) / 2;
+		recurs(piles, begin, begin - size_2 + 1);
 		ft_printf("SIZE1=%d SIZE2=%d\n", size_1, size_2);
 		merge_parts(piles, size_1, size_2); 
 	}
@@ -134,4 +134,5 @@ void	sort2(t_piles *piles)
 {
 	ft_printf("Start Sort\n");
 	recurs(piles, piles->len_a - 1, 0);
+	rotate_a(piles);
 }
