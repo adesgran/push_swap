@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 15:23:45 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/08 15:50:33 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/11 14:20:30 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 static int	*init_pile_a(int ac, char **av)
 {
 	int	*tab;
+	int	i;
 
+	i = 0;
 	tab = malloc(sizeof(int) * ac);
 	if (!tab)
 		return (NULL);
 	while (ac)
 	{
-		tab[ac - 1] = ft_atoi(av[ac - 1]);
+		tab[i] = ft_atoi(av[ac - 1]);
+		i++;
 		ac--;
 	}
 	return (tab);
