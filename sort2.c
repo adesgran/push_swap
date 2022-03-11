@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/11 12:19:36 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/11 12:23:44 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,8 @@ void	recurs(t_piles *piles, int begin, int end)
 		if (piles->pile_a[begin] < piles->pile_a[end])
 		{
 			swap_a(piles);
-			DEBUG
 		}
 		rotate_a(piles);
-		DEBUG
 	}
 }
 
