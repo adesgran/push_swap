@@ -36,9 +36,9 @@ fclean: clean
 
 re: fclean all
 
-test: all
-	./push_swap 1 3 6 4 2 5
 testt: all
-	./push_swap 1 3 6 4 2 5 7
+	python3 pyviz.py `ruby -e "puts (0..20).to_a.shuffle.join(' ')"`
 testtt: all
-	./push_swap 1 3 6 4 2 5 8 7
+	python3 pyviz.py `ruby -e "puts (0..200).to_a.shuffle.join(' ')"`
+test: all
+	python3 pyviz.py `ruby -e "puts (0..9).to_a.shuffle.join(' ')"`
