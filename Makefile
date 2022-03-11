@@ -14,12 +14,15 @@ INCLUDES = -I . -I libft
 LIBS = -L libft -lft
 LIBFT = libft/libft.a
 
+LIBFT_REPO = https://github.com/adesgran/libft_extended.git
+
 .c.o:
 	${CC} ${FLAGS} ${INCLUDES} -c $< -o ${<:.c=.o}
 
 all: ${LIBFT} ${NAME}
 
 ${LIBFT}:
+	if [ ! -d "./libft" ]; then git clone ${LIBFT_REPO} libft; fi
 	make -C libft
 
 ${NAME}: ${O_FILES}
