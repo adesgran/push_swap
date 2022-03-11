@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/11 12:23:44 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/11 12:30:30 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static void	merge_parts(t_piles *piles, int size_1, int size_2)
 	int	j;
 
 	i = split_piles(piles, size_1, size_2);
-	ft_printf("i = %d\n", i);
 	j = size_1;
 	while (j > 1 || i > -1)
 	{
