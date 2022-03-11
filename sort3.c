@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/11 15:13:03 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/11 15:18:44 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,16 +94,12 @@ static void	recurs(t_piles *piles, int begin, int end)
 		rotate_a(piles);
 		size_2 = (begin - end + 1) / 2;
 		recurs(piles, begin, begin - size_2 + 1);
-		//rotate_a(piles);
 		merge_parts(piles, size_1, size_2); 
 	}
 	else if (begin - end == 1)
 	{
 		if (piles->pile_a[begin] < piles->pile_a[end])
-		{
 			swap_a(piles);
-		//	rotate_a(piles);
-		}
 		rotate_a(piles);
 	}
 }
