@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:00:20 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 14:38:00 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/23 14:43:46 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ t_piles	*read_str(int size, int *tab)
 	}
 	piles->len_a = size;
 	piles->len_b = 0;
+	free(tab);
 	return (piles);
 }
 
