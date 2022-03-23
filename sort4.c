@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort3.c                                            :+:      :+:    :+:   */
+/*   sort4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 12:59:19 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/23 13:50:59 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ static void	recurs(t_piles *piles, int begin, int end)
 	}
 }
 
-void	sort3(t_piles *piles)
+void	sort4(t_piles *piles)
 {
 	recurs(piles, piles->len_a - 1, 0);
 	if (piles->pile_a[0] < piles->pile_a[piles->len_a - 1])
