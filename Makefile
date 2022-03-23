@@ -42,3 +42,7 @@ testtt: all
 	python3 pyviz.py `ruby -e "puts (0..200).to_a.shuffle.join(' ')"`
 test: all
 	python3 pyviz.py `ruby -e "puts (0..9).to_a.shuffle.join(' ')"`
+cent: all
+	python3 pyviz.py `ruby -e "puts (0..99).to_a.shuffle.join(' ')"`
+ccent: all
+	python3 pyviz.py `ruby -e "puts (0..499).to_a.shuffle.join(' ')"`
