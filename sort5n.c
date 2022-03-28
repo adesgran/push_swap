@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 14:25:04 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/28 15:23:55 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/28 15:38:00 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,37 @@ static int	get_max(int *pile, int init)
 	return (res);
 }
 
-static	split_piles(t_piles *piles, int *pile, int init)
+static void	merge_piles(t_piles *piles, int init)
+{
+	int	len_a;
+	int	len_b;
+	int	count;
+
+	len_a = 2;
+	count = 0;
+	while (len_a < 5)
+	{
+		if (piles->pile_b[piles->len_b - 1] > piles->pile_a[init + len_a - 1] || count == len_a)
+		{
+			push_a(piles);
+			count++;
+			if (count < 5)
+				rotate_a(piles);
+			len_a++;
+		}
+		else
+		{
+			count++;
+			if (count < 5)
+				rotate_a(piles);
+		}
+	}
+	while (count < 5)
+		rotate_a(piles);
+}
+		
+
+static void	split_piles(t_piles *piles, int *pile, int init)
 {
 	if (pile[init + 2] > pile[init + 3] && pile[init + 2] > pile[init + 4])
 	{
