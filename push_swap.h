@@ -6,13 +6,23 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 14:33:49 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:25:25 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define DEBUG print_piles(piles);
+# define SA 11
+# define SB 12
+# define SS 13
+# define PA 14
+# define PB 15
+# define RA 16
+# define RB 17
+# define RR 18
+# define RRA 19
+# define RRB 20
+# define RRR 21
 # include <libft.h>
 
 typedef struct s_piles {
@@ -44,4 +54,5 @@ void	sort2(t_piles *piles);
 void	sort3(t_piles *piles);
 void	sort4(t_piles *piles);
 t_piles	*init_piles_str(char *str);
+void	sort3n(t_piles *piles)
 #endif
