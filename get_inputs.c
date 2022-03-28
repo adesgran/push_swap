@@ -6,8 +6,14 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:44:04 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 17:48:45 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/28 12:32:37 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fdf.h>
+#include <push_swap.h>
+
+
+void	get_inputs(int *in)
+{
+	(void)in;
+}
