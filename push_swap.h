@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/28 13:28:27 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/28 14:25:52 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,5 @@ void	sort4(t_piles *piles);
 t_piles	*init_piles_str(char *str);
 void	sort3n(t_piles *piles);
 void	sort4n(t_piles *piles);
+void	sort5n(t_piles *piles);
 #endif
