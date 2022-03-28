@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 13:50:59 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/03/28 12:42:41 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,21 @@ static int	split_piles(t_piles *piles, int size_1, int size_2)
 		i++;
 	}
 	j = 0;
-	while (j < size_1 - 1)
+	if (size_1 / 2 < piles->len_a)
 	{
-		rrotate_a(piles);
-		j++;
+		while (j < size_1 - 1)
+		{
+			rrotate_a(piles);
+			j++;
+		}
+	}
+	else
+	{
+		while (j < piles->len_a - size_1 + 1)
+		{
+			rotate_a(piles);
+			j++;
+		}
 	}
 	return (i - 1);
 }
