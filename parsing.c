@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 13:16:00 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 15:47:41 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:48:51 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,15 +95,11 @@ int	parsing(char *str)
 {
 	if (!str)
 		return (1);
-	ft_printf("str is not NULL\n");
 	if (!*str)
 		return (1);
-	ft_printf("str is not empty\n");
 	if (check_char(str))
 		return (1);
-	ft_printf("check_char OK\n");
 	if (check_double(str))
 		return (1);
-	ft_printf("ALL check OK\n");
 	return (0);
 }

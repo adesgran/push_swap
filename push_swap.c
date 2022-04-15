@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 15:29:16 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:48:25 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static char	*tab_to_str(int ac, char **av)
 			return (NULL);
 		free(temp);
 		temp = res;
+		i++;
 	}
 	return (res);
 }
@@ -62,7 +63,10 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	if (checker(ac - 1, av + 1))
+	{
+		ft_printf("Parsing ERROR\n");
 		return (1);
+	}
 	if (ac == 2)
 		piles = init_piles_str(av[1]);
 	else
