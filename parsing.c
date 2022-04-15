@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 13:16:00 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 15:48:51 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/15 17:14:05 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ static int	check_double(char *str)
 
 	while (*str)
 	{
-		if (*str == '0')
-			return (1);
 		current = ft_atoi(str);
 		index = 0;
 		while (str[index])
