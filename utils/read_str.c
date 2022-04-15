@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:00:20 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/23 14:43:46 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/15 17:23:39 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,13 @@ static int	count_size(char *str)
 	 i = 0;
 	 while (*str)
 	{
+		if (*str == '-')
+			str++;
 		if (ft_isdigit(*str))
 			i++;
 		while (ft_isdigit(*str))
 			str++;
-		while (ft_isdigit(*str) == 0 && *str)
+		while ((*str == '-' || ft_isdigit(*str)) == 0 && *str)
 		{
 			if (*str != ' ')
 				return (0);
@@ -109,9 +111,11 @@ t_piles	*init_piles_str(char *str)
 	{
 		res[i] = ft_atoi(str);
 		i++;
+		if (*str == '-' || *str == '+')
+			str++;
 		while (ft_isdigit(*str))
 			str++;
-		while (!ft_isdigit(*str) && *str)
+		while (!(ft_isdigit(*str) || *str == '-') && *str)
 			str++;
 	}
 	return (read_str(size, res));
