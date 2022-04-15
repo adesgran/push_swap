@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:12:57 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/30 15:25:46 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/15 13:04:38 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ static void	recurs(t_piles *piles, int begin, int end)
 	else if (begin - end == 3)
 		sort4n(piles);
 	else if (begin - end == 4)
-		sort5n(piles);
+		sort5nb(piles);
 }
 
 void	sort4(t_piles *piles)
