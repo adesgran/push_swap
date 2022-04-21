@@ -46,4 +46,6 @@ cent: all
 	python3 pyviz.py `ruby -e "puts (0..99).to_a.shuffle.join(' ')"`
 ccent: all
 	python3 pyviz.py `ruby -e "puts (0..499).to_a.shuffle.join(' ')"`
+five: all
+	python3 pyviz.py `ruby -e "puts (0..4).to_a.shuffle.join(' ')"`
 
