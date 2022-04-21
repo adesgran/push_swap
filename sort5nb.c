@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 12:27:30 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 13:10:10 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 12:43:33 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static void	split_pile(t_piles *piles, int init, int mid)
 			rotate_a(piles);
 		i--;
 	}
-	while (i <= init)
+	while (i <= init && piles->len_a > 2)
 	{
 		rrotate_a(piles);
 		i++;

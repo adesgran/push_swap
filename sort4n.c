@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:13:10 by adesgran          #+#    #+#             */
-/*   Updated: 2022/03/30 15:26:10 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 12:40:44 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,6 @@ static void	merge_piles(t_piles *piles, int init)
 	else
 		merge_piles_bis(piles, init);
 }
-
-
-
 
 static void	sort_algo(t_piles *piles, int *pile, int init)
 {

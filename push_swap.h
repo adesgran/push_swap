@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 17:07:35 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 12:35:48 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,14 @@ void	sort4n(t_piles *piles);
 void	sort5n(t_piles *piles);
 void	sort5nb(t_piles *piles);
 int		parsing(char *str);
+#ifndef __DEBUG__
+#define __DEBUG__
+
+#ifdef DEBUG
+#define debug(fmt, ...) fprintf(stderr, fmt, ##__VA_ARGS__)
+#else
+#define debug(fmt, ...) ((void)0)
+#endif
+
+#endif
 #endif
