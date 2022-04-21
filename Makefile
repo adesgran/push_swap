@@ -37,15 +37,21 @@ fclean: clean
 re: fclean all
 
 testt: all
+	./test.sh `ruby -e "puts (0..20).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..20).to_a.shuffle.join(' ')"`
 testtt: all
+	./test.sh `ruby -e "puts (0..200).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..200).to_a.shuffle.join(' ')"`
 test: all
+	./test.sh `ruby -e "puts (0..9).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..9).to_a.shuffle.join(' ')"`
 cent: all
+	./test.sh `ruby -e "puts (0..99).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..99).to_a.shuffle.join(' ')"`
 ccent: all
+	./test.sh `ruby -e "puts (0..499).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..499).to_a.shuffle.join(' ')"`
 five: all
+	./test.sh `ruby -e "puts (0..4).to_a.shuffle.join(' ')"`
 	python3 pyviz.py `ruby -e "puts (0..4).to_a.shuffle.join(' ')"`
 

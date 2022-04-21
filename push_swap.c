@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 12:14:34 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:27:38 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ int	main(int ac, char **av)
 		piles = init_piles(ac - 1, av + 1);
 	if (!piles)
 		return (1);
-	sort(piles);
+	if (n_pile_is_sort(piles, 0, piles->len_a - 1))
+		sort(piles);
 	free_piles(piles);
 	return (0);
 }

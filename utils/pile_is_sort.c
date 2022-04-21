@@ -6,11 +6,37 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:13:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/01/14 13:03:48 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:21:34 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
+
+int	n_pile_is_sort(t_piles *piles, int start, int end)
+{
+	int	*pile;
+
+	pile = piles->pile_a;
+	if (start < end)
+	{
+		while (start < end)
+		{
+			if (pile[start] < pile[start + 1])
+				return (1);
+			start++;
+		}
+	}
+	else if(start > end)
+	{
+		while (start > end)
+		{
+			if (pile[start] > pile[start - 1])
+				return (1);
+			start--;
+		}
+	}
+	return (0);
+}
 
 int	pile_is_sort(t_piles *piles)
 {

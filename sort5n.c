@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 14:25:04 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 12:41:26 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:56:18 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,8 @@ void	sort5n(t_piles *piles)
 	int	*pile;
 	int	init;
 
+	if (piles->len_a == 5)
+		return (sort5nb(piles));
 	pile = piles->pile_a;
 	init = piles->len_a - 5;
 	if (get_min(pile, init) == init + 3)
