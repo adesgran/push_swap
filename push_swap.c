@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:00:24 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 12:13:58 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/21 12:14:34 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ static int	checker(int ac, char **av)
 	free(str);
 	return (res);
 }
-	
-
 
 int	main(int ac, char **av)
 {	
