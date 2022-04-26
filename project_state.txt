@@ -1,1 +1,1 @@
-need to fix sort6n.c
+need to test ALL
