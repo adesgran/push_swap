@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 14:25:04 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 15:24:44 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:29:15 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,6 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 	else
 	{
 		push_b(piles);
-		if (piles->len_b == 1)
-			rotate_b(piles);
 		if (pile[init + 2] > pile[init + 3])
 			swap_a(piles);
 		push_b(piles);
