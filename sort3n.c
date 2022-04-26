@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:45:46 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 14:43:01 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:12:16 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	sort3n(t_piles *piles)
 	{
 		if (pile[init + 1] < pile[init])
 			sequence_1(piles);
-		else if(pile[init + 1] > pile[init + 2])
+		else if (pile[init + 1] > pile[init + 2])
 			sequence_2(piles);
 		else
 			sequence_3(piles);
