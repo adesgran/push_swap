@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 15:35:46 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:09:41 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int		rrotate_a(t_piles *piles);
 int		rrotate_b(t_piles *piles);
 int		rrotate_r(t_piles *piles);
 t_piles	*init_piles(int ac, char **av);
-void	print_piles(t_piles *piles);
 int		free_piles(t_piles *piles);
 int		pile_is_sort(t_piles *piles);
 int		n_pile_is_sort(t_piles *piles, int start, int end);
