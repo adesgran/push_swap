@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 12:27:30 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 14:59:31 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:10:28 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,10 @@ static void	split_pile(t_piles *piles, int init, int mid)
 	push_a(piles);
 }
 
-
 void	sort5nb(t_piles *piles)
 {
 	int	init;
-	int *pile;
+	int	*pile;
 	int	mid;
 
 	pile = piles->pile_a;
@@ -100,4 +99,3 @@ void	sort5nb(t_piles *piles)
 	mid = get_mid(pile, init);
 	split_pile(piles, init, mid);
 }
-
