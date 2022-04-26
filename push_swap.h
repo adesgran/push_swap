@@ -6,23 +6,12 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:59:13 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 13:21:40 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:22:21 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define SA 11
-# define SB 12
-# define SS 13
-# define PA 14
-# define PB 15
-# define RA 16
-# define RB 17
-# define RR 18
-# define RRA 19
-# define RRB 20
-# define RRR 21
 # include <libft.h>
 
 typedef struct s_piles {
