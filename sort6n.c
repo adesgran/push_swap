@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 16:41:31 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 17:09:39 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ static void	merge_piles(t_piles *piles, int init)
 		rotate_a(piles);
 	}
 }
+
+static void sort_a(t_piles *piles, int *pile, init)
+{
+
 
 static void	split_piles_else(t_piles *piles, int *pile, int init)
 {
