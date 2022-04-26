@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 17:09:39 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 17:38:35 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,19 @@ static void	merge_piles(t_piles *piles, int init)
 	}
 }
 
-static void sort_a(t_piles *piles, int *pile, init)
+static void sort_a(t_piles *piles, int *pile, int init)
 {
-
+	if (pile[init + 2] > pile[init + 1] && pile[init] < pile[init + 2])
+		swap_a(piles);
+	if (pile[init + 1] > pile[init] && pile[init + 1] > pile[init + 2])
+	{
+		rotate_a(piles);
+		swap_a(piles);
+		rrotate_a(piles);
+	}
+	if (pile[init + 1] < pile[init + 2])
+		swap_a(piles);
+}
 
 static void	split_piles_else(t_piles *piles, int *pile, int init)
 {
@@ -76,8 +86,7 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 	}
 	else
 		split_piles_else(piles, pile, init);
-	if (piles->pile_a[init] < piles->pile_a[init + 1])
-		swap_a(piles);
+	sort_a(piles, pile, init);
 	merge_piles(piles, init);
 }
 
