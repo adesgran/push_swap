@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 15:35:57 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:13:09 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 		swap_a(piles);
 	merge_piles(piles, init);
 }
+
 void	sort6n(t_piles *piles)
 {
 	int	*pile;
