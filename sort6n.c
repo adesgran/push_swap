@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 16:13:09 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:40:20 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,9 @@ static void	merge_piles(t_piles *piles, int init)
 	}
 }
 
-static void	split_piles(t_piles *piles, int *pile, int init)
+static void	split_piles_else(t_piles *piles, int *pile, int init)
 {
-	if (pile[init + 3] < pile[init + 4] && pile[init + 3] < pile[init + 5])
-	{
-		if (pile[init + 4] > pile[init + 5])
-			swap_a(piles);
-		push_b(piles);
-		push_b(piles);
-		push_b(piles);
-	}
-	else if (pile[init + 4] < pile[init + 3] && pile[init + 4] < pile[init + 5])
+	if (pile[init + 4] < pile[init + 3] && pile[init + 4] < pile[init + 5])
 	{
 		push_b(piles);
 		swap_a(piles);
@@ -65,6 +57,19 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 		push_b(piles);
 		rrotate_b(piles);
 	}
+}
+static void	split_piles(t_piles *piles, int *pile, int init)
+{
+	if (pile[init + 3] < pile[init + 4] && pile[init + 3] < pile[init + 5])
+	{
+		if (pile[init + 4] > pile[init + 5])
+			swap_a(piles);
+		push_b(piles);
+		push_b(piles);
+		push_b(piles);
+	}
+	else
+		split_piles_else(piles, pile, init);
 	if (piles->pile_a[init] < piles->pile_a[init + 1])
 		swap_a(piles);
 	merge_piles(piles, init);
