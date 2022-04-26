@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 17:38:35 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 17:40:08 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	merge_piles(t_piles *piles, int init)
 	}
 }
 
-static void sort_a(t_piles *piles, int *pile, int init)
+static void	sort_a(t_piles *piles, int *pile, int init)
 {
 	if (pile[init + 2] > pile[init + 1] && pile[init] < pile[init + 2])
 		swap_a(piles);
