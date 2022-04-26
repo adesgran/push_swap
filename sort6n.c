@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:26:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/26 16:40:20 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:41:31 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static void	merge_piles(t_piles *piles, int init)
 	count = 0;
 	while (piles->len_b)
 	{
-		if (piles->pile_b[piles->len_b - 1] < piles->pile_a[piles->len_a - 1] || count == len_a)
+		if (piles->pile_b[piles->len_b - 1] < piles->pile_a[piles->len_a - 1] \
+				|| count == len_a)
 		{
 			push_a(piles);
 			len_a++;
@@ -58,6 +59,7 @@ static void	split_piles_else(t_piles *piles, int *pile, int init)
 		rrotate_b(piles);
 	}
 }
+
 static void	split_piles(t_piles *piles, int *pile, int init)
 {
 	if (pile[init + 3] < pile[init + 4] && pile[init + 3] < pile[init + 5])
