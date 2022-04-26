@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 14:25:04 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 13:56:18 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:24:44 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,29 +36,22 @@ static int	get_min(int *pile, int init)
 static void	merge_piles(t_piles *piles, int init)
 {
 	int	len_a;
-	int	len_b;
 	int	count;
 
 	len_a = 2;
 	count = 0;
-	while (len_a < 5)
+	while (piles->len_b)
 	{
-		if (piles->pile_b[piles->len_b - 1] < piles->pile_a[len_a - 1] || count == len_a)
+		if (piles->pile_b[piles->len_b - 1] < piles->pile_a[piles->len_a - 1] || count == len_a)
 		{
 			push_a(piles);
-			count++;
-			if (count < 5)
-				rotate_a(piles);
 			len_a++;
 		}
-		else
-		{
-			count++;
-			if (count < 5)
-				rotate_a(piles);
-		}
+		count++;
+		if (count < 5)
+			rotate_a(piles);
 	}
-	while (count < 5)
+	while (count < 4)
 	{
 		count++;
 		rotate_a(piles);
@@ -80,7 +73,7 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 		push_b(piles);
 		swap_a(piles);
 		push_b(piles);
-		if (piles->pile_b[piles->len_b - 1] < piles->pile_b[piles->len_b - 2])
+		if (piles->pile_b[0] < piles->pile_b[1])
 			swap_b(piles);
 		push_b(piles);
 	}
@@ -96,7 +89,7 @@ static void	split_piles(t_piles *piles, int *pile, int init)
 		if (piles->len_b == 3)
 			rrotate_b(piles);
 	}
-	if (pile[init] < pile[init + 1])
+	if (piles->pile_a[init] < piles->pile_a[init + 1])
 		swap_a(piles);
 	merge_piles(piles, init);
 }
