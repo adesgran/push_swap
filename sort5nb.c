@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 12:27:30 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 12:43:33 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:07:26 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,21 +43,21 @@ static void	sort_b(t_piles *piles)
 	int	*pile;
 
 	pile = piles->pile_b;
-	if (pile[0] > pile[1] && pile[0] > pile[2])
+	if (pile[0] < pile[1] && pile[0] < pile[2])
 	{
-		if (pile[2] > pile[1])
+		if (pile[2] < pile[1])
 			swap_b(piles);
 	}
-	else if (pile[1] > pile[2] && pile[1] > pile[0])
+	else if (pile[1] < pile[2] && pile[1] < pile[0])
 	{
 		rrotate_b(piles);
-		if (pile[2] > pile[1])
+		if (pile[2] < pile[1])
 			swap_b(piles);
 	}
 	else
 	{
 		rotate_b(piles);
-		if (pile[2] > pile[1])
+		if (pile[2] < pile[1])
 			swap_b(piles);
 	}
 }
@@ -69,7 +69,7 @@ static void	split_pile(t_piles *piles, int init, int mid)
 	i = piles->len_a - 1;
 	while (i >= init && piles->len_b < 3)
 	{
-		if (piles->pile_a[piles->len_a - 1] >= mid)
+		if (piles->pile_a[piles->len_a - 1] <= mid)
 			push_b(piles);
 		else
 			rotate_a(piles);
@@ -80,7 +80,7 @@ static void	split_pile(t_piles *piles, int init, int mid)
 		rrotate_a(piles);
 		i++;
 	}
-	if (piles->pile_a[piles->len_a - 1] < piles->pile_a[piles->len_a - 2])
+	if (piles->pile_a[piles->len_a - 1] > piles->pile_a[piles->len_a - 2])
 		swap_a(piles);
 	sort_b(piles);
 	push_a(piles);
