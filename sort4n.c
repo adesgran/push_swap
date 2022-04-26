@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:13:10 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 12:40:44 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:11:18 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,11 @@ static void	sort_algo(t_piles *piles, int *pile, int init)
 		swap_a(piles);
 	merge_piles(piles, init);
 }
+
 void	sort4n(t_piles *piles)
 {
 	int	*pile;
-	int init;
+	int	init;
 
 	init = piles->len_a - 4;
 	pile = piles->pile_a;
