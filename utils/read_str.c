@@ -6,7 +6,7 @@
 /*   By: adesgran <adesgran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:00:20 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/15 17:23:39 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:06:23 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ static int	count_size(char *str)
 {
 	int	i;
 
-	 i = 0;
-	 while (*str)
+	i = 0;
+	while (*str)
 	{
 		if (*str == '-')
 			str++;
@@ -66,13 +66,13 @@ static int	count_size(char *str)
 			str++;
 		}
 	}
-	 return (i);
+	return (i);
 }
 
 t_piles	*read_str(int size, int *tab)
 {
 	t_piles	*piles;
-	
+
 	piles = malloc(sizeof(t_piles));
 	if (!piles)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:13:53 by adesgran          #+#    #+#             */
-/*   Updated: 2022/04/21 14:21:34 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:06:52 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	n_pile_is_sort(t_piles *piles, int start, int end)
 			start++;
 		}
 	}
-	else if(start > end)
+	else if (start > end)
 	{
 		while (start > end)
 		{
